@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+
+import Chat from './components/Chat/Chat'
+import Join from './components/Join/Join'
+
+const App=()=> (
+    <Router>
+      <Route path="/" exact component={Join} />
+      <Route path="/chat" component={Chat} />
+    </Router>
   );
-}
 
 export default App;
